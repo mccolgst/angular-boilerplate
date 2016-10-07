@@ -18,7 +18,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loader: 'ts'
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
       },
       {
         test: /\.html$/,
@@ -34,8 +34,13 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
       },
       {
+        test: /\.css$/,
+        include: helpers.root('src', 'app'),
+        loader: 'raw'
+      },
+      {
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        loaders: ["raw", "sass"]
       }
     ]
   },

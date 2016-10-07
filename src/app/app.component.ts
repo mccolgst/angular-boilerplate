@@ -1,25 +1,8 @@
-import { 
-  Component,
-  Input,
-  trigger,
-  state,
-  style,
-  transition,
-  animate,
-  Output
-} from '@angular/core';
-
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'main-app',
-  template: require('./app.component.html'),
-  styles: [require('./app.scss').toString()],
-  directives: [ROUTER_DIRECTIVES]
+  selector: 'app',
+  template: '<router-outlet></router-outlet>',
+  styleUrls: ['./app.component.scss']
 })
-
-export class AppComponent {
-
-  constructor() {}
-
-}
+export class AppComponent { }
